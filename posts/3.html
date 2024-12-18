@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>No-Deep-GomokuView-AI项目介绍 | 无深~博客</title><meta name="author" content="无深"><meta name="copyright" content="无深"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、项目概述本项目旨在使用飞桨框架 2.0 实现 AlphaZero 算法，构建一个能够玩五子棋的 AI 模型。通过纯粹的自我博弈方式进行训练，使 AI 在短时间内达到一定的棋力水平，能够与人类玩家进行有挑战性的对弈。 二、五子棋游戏简介五子棋是一款经典的两人对弈棋类游戏，双方分别使用黑白棋子，在棋盘竖线与横线的交叉点上轮流落子，率先形成五子连线的一方获胜。其规则简单易懂，上手容易，适合各个年龄段">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No-Deep-GomokuView-AI项目介绍">
+<meta property="og:url" content="http://example.com/posts/3.html">
+<meta property="og:site_name" content="无深~博客">
+<meta property="og:description" content="一、项目概述本项目旨在使用飞桨框架 2.0 实现 AlphaZero 算法，构建一个能够玩五子棋的 AI 模型。通过纯粹的自我博弈方式进行训练，使 AI 在短时间内达到一定的棋力水平，能够与人类玩家进行有挑战性的对弈。 二、五子棋游戏简介五子棋是一款经典的两人对弈棋类游戏，双方分别使用黑白棋子，在棋盘竖线与横线的交叉点上轮流落子，率先形成五子连线的一方获胜。其规则简单易懂，上手容易，适合各个年龄段">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-12-17T16:58:32.379Z">
+<meta property="article:modified_time" content="2024-12-17T17:04:27.630Z">
+<meta property="article:author" content="无深">
+<meta property="article:tag" content="无深个人博客，只明天更好！">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/posts/3.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><meta name="msapplication-TileColor" content="#3b70fc"/><link rel="apple-touch-icon" sizes="180x180" href="/img/siteicon/128.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/siteicon/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/siteicon/16.png"/><link rel="mask-icon" href="/img/siteicon/128.png" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'No-Deep-GomokuView-AI项目介绍',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-12-18 01:04:27'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="无深~博客" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="无深~博客"><span class="site-name">无深~博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">No-Deep-GomokuView-AI项目介绍</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-12-17T16:58:32.379Z" title="发表于 2024-12-18 00:58:32">2024-12-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-12-17T17:04:27.630Z" title="更新于 2024-12-18 01:04:27">2024-12-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="No-Deep-GomokuView-AI项目介绍"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一、项目概述"><a href="#一、项目概述" class="headerlink" title="一、项目概述"></a>一、项目概述</h2><p>本项目旨在使用飞桨框架 2.0 实现 AlphaZero 算法，构建一个能够玩五子棋的 AI 模型。通过纯粹的自我博弈方式进行训练，使 AI 在短时间内达到一定的棋力水平，能够与人类玩家进行有挑战性的对弈。</p>
+<h2 id="二、五子棋游戏简介"><a href="#二、五子棋游戏简介" class="headerlink" title="二、五子棋游戏简介"></a>二、五子棋游戏简介</h2><p>五子棋是一款经典的两人对弈棋类游戏，双方分别使用黑白棋子，在棋盘竖线与横线的交叉点上轮流落子，率先形成五子连线的一方获胜。其规则简单易懂，上手容易，适合各个年龄段的人群，具有很高的趣味性和竞技性。</p>
+<h2 id="三、本项目简介"><a href="#三、本项目简介" class="headerlink" title="三、本项目简介"></a>三、本项目简介</h2><p>本项目专注于运用 AlphaZero 算法来实现五子棋 AI。相较于复杂的围棋和象棋，五子棋的规则较为简洁，这使得我们能够将更多精力放在 AlphaZero 算法的训练和优化上。通过在一台普通 PC 机上进行几个小时的训练，即可获得一个具有一定实力的 AI 模型，在与人类玩家的对弈中展现出较强的竞争力。</p>
+<h2 id="四、为什么使用-MCTS（蒙特卡洛树搜索）"><a href="#四、为什么使用-MCTS（蒙特卡洛树搜索）" class="headerlink" title="四、为什么使用 MCTS（蒙特卡洛树搜索）"></a>四、为什么使用 MCTS（蒙特卡洛树搜索）</h2><p>在传统的棋盘游戏决策过程中，玩家通常会思考多种走法及其可能的后续局面。类似 Minimax 这样的传统 AI 博弈树搜索算法，在做出决策前需要穷举所有可能的走法，这在面对复杂游戏时，其搜索空间会呈指数级增长，导致效率极其低下。例如，国际象棋的平均分支因子为 35，仅走两步就有 1,225（35²）种可能的棋面；围棋的平均分支因子更是高达 250，走两步就会产生 62,500（250²）种棋面。</p>
+<p>而随着神经网络技术的发展，我们可以利用神经网络来指导搜索过程，筛选出更有价值的博弈路径进行探索，避免陷入大量无用的搜索分支中。蒙特卡洛树搜索（MCTS）算法在此背景下应运而生，它通过巧妙地结合神经网络的预测能力和树搜索的探索机制，有效地提高了搜索效率和决策质量。</p>
+<h2 id="五、训练算法流程"><a href="#五、训练算法流程" class="headerlink" title="五、训练算法流程"></a>五、训练算法流程</h2><p>AlphaZero 算法的核心在于通过自我对弈不断收集数据，进而更新策略价值网络，而更新后的网络又会用于后续的自我对弈，形成一个相互促进、不断迭代的学习过程，从而实现 AI 棋力的稳步提升。</p>
+<p>在本项目中，我们将训练流程封装在 <code>TrainPipeline</code> 类中，其中 <code>run</code> 方法是训练的主要执行逻辑。它会循环调用 <code>collect_selfplay_data</code> 方法来收集自我对弈产生的数据，当收集的数据量超过设定的 <code>batch_size</code> 时，就会调用 <code>policy_update</code> 方法对策略价值网络进行更新。在训练过程中，还可以根据实际需求调整各种超参数，如学习率、模拟次数、经验池大小等，以优化训练效果。</p>
+<p>以下是 <code>TrainPipeline</code> 类的详细代码解释：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TrainPipeline</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, init_model=<span class="literal">None</span>, is_shown=<span class="number">0</span></span>):</span><br><span class="line">        <span class="comment"># 五子棋逻辑和棋盘UI的参数</span></span><br><span class="line">        <span class="variable language_">self</span>.board_width = <span class="number">9</span></span><br><span class="line">        <span class="variable language_">self</span>.board_height = <span class="number">9</span></span><br><span class="line">        <span class="variable language_">self</span>.n_in_row = <span class="number">5</span></span><br><span class="line">        <span class="variable language_">self</span>.board = Board(width=<span class="variable language_">self</span>.board_width,</span><br><span class="line">                           height=<span class="variable language_">self</span>.board_height,</span><br><span class="line">                           n_in_row=<span class="variable language_">self</span>.n_in_row)</span><br><span class="line">        <span class="variable language_">self</span>.is_shown = is_shown</span><br><span class="line">        <span class="variable language_">self</span>.game = Game_UI(<span class="variable language_">self</span>.board, is_shown)</span><br><span class="line">        <span class="comment"># 训练参数</span></span><br><span class="line">        <span class="variable language_">self</span>.learn_rate = <span class="number">2e-3</span></span><br><span class="line">        <span class="variable language_">self</span>.lr_multiplier = <span class="number">1.0</span>  <span class="comment"># 基于KL自适应地调整学习率</span></span><br><span class="line">        <span class="variable language_">self</span>.temp = <span class="number">1.0</span>  <span class="comment"># 临时变量</span></span><br><span class="line">        <span class="variable language_">self</span>.n_playout = <span class="number">400</span>  <span class="comment"># 每次移动的模拟次数</span></span><br><span class="line">        <span class="variable language_">self</span>.c_puct = <span class="number">5</span></span><br><span class="line">        <span class="variable language_">self</span>.buffer_size = <span class="number">10000</span>  <span class="comment"># 经验池大小 10000</span></span><br><span class="line">        <span class="variable language_">self</span>.batch_size = <span class="number">512</span>  <span class="comment"># 训练的mini-batch大小 512</span></span><br><span class="line">        <span class="variable language_">self</span>.data_buffer = deque(maxlen=<span class="variable language_">self</span>.buffer_size)</span><br><span class="line">        <span class="variable language_">self</span>.play_batch_size = <span class="number">1</span></span><br><span class="line">        <span class="variable language_">self</span>.epochs = <span class="number">5</span>  <span class="comment"># 每次更新的train_steps数量</span></span><br><span class="line">        <span class="variable language_">self</span>.kl_targ = <span class="number">0.02</span></span><br><span class="line">        <span class="variable language_">self</span>.check_freq = <span class="number">100</span>  <span class="comment"># 评估模型的频率，可以设置大一些比如500</span></span><br><span class="line">        <span class="variable language_">self</span>.game_batch_num = <span class="number">1500</span></span><br><span class="line">        <span class="variable language_">self</span>.best_win_ratio = <span class="number">0.0</span></span><br><span class="line">        <span class="comment"># 用于纯粹的mcts的模拟数量，用作评估训练策略的对手</span></span><br><span class="line">        <span class="variable language_">self</span>.pure_mcts_playout_num = <span class="number">1000</span></span><br><span class="line">        <span class="keyword">if</span> init_model:</span><br><span class="line">            <span class="comment"># 从初始的策略价值网开始训练</span></span><br><span class="line">            <span class="variable language_">self</span>.policy_value_net = PolicyValueNet(<span class="variable language_">self</span>.board_width,</span><br><span class="line">                                                   <span class="variable language_">self</span>.board_height,</span><br><span class="line">                                                   model_file=init_model)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment"># 从新的策略价值网络开始训练</span></span><br><span class="line">            <span class="variable language_">self</span>.policy_value_net = PolicyValueNet(<span class="variable language_">self</span>.board_width,</span><br><span class="line">                                                   <span class="variable language_">self</span>.board_height)</span><br><span class="line">        <span class="comment"># 定义训练机器人</span></span><br><span class="line">        <span class="variable language_">self</span>.mcts_player = MCTSPlayer(<span class="variable language_">self</span>.policy_value_net.policy_value_fn,</span><br><span class="line">                                      c_puct=<span class="variable language_">self</span>.c_puct,</span><br><span class="line">                                      n_playout=<span class="variable language_">self</span>.n_playout,</span><br><span class="line">                                      is_selfplay=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在 <code>__init__</code> 方法中，首先初始化了与五子棋游戏逻辑和棋盘显示相关的参数，包括棋盘的宽度、高度、连成五子获胜的条件，以及创建了棋盘和游戏界面的实例。</li>
+<li>接着定义了一系列训练参数，如学习率、学习率乘数（用于基于 KL 散度自适应调整学习率）、温度参数（用于控制探索程度）、每次移动的模拟次数、PUCT 算法中的 <code>c_puct</code> 参数、经验池大小、训练的小批次大小、训练轮数、KL 散度目标值、模型评估频率、总的游戏批次数量以及当前最佳胜率等。</li>
+<li>根据是否提供初始模型文件路径，选择加载已有模型或创建新的策略价值网络实例，并创建基于该网络的 MCTS 玩家实例，用于自我对弈训练。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">get_equi_data</span>(<span class="params">self, play_data</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;通过旋转和翻转来增加数据集</span></span><br><span class="line"><span class="string">    play_data: [(state, mcts_prob, winner_z),...,...]</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    extend_data = []</span><br><span class="line">    <span class="keyword">for</span> state, mcts_porb, winner <span class="keyword">in</span> play_data:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]:</span><br><span class="line">            <span class="comment"># 逆时针旋转</span></span><br><span class="line">            equi_state = np.array([np.rot90(s, i) <span class="keyword">for</span> s <span class="keyword">in</span> state])</span><br><span class="line">            equi_mcts_prob = np.rot90(np.flipud(</span><br><span class="line">                mcts_porb.reshape(<span class="variable language_">self</span>.board_height, <span class="variable language_">self</span>.board_width)), i)</span><br><span class="line">            extend_data.append((equi_state,</span><br><span class="line">                                np.flipud(equi_mcts_prob).flatten(),</span><br><span class="line">                                winner))</span><br><span class="line">            <span class="comment"># 水平翻转</span></span><br><span class="line">            equi_state = np.array([np.fliplr(s) <span class="keyword">for</span> s <span class="keyword">in</span> equi_state])</span><br><span class="line">            equi_mcts_prob = np.fliplr(equi_mcts_prob)</span><br><span class="line">            extend_data.append((equi_state,</span><br><span class="line">                                np.flipud(equi_mcts_prob).flatten(),</span><br><span class="line">                                winner))</span><br><span class="line">    <span class="keyword">return</span> extend_data</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>get_equi_data</code> 方法用于数据增强，通过对原始的自我对弈数据进行旋转和翻转操作，扩充数据集的多样性，从而提高模型的泛化能力。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">collect_selfplay_data</span>(<span class="params">self, n_games=<span class="number">1</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;收集自我博弈数据进行训练&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n_games):</span><br><span class="line">        winner, play_data = <span class="variable language_">self</span>.game.start_self_play(<span class="variable language_">self</span>.mcts_player, temp=<span class="variable language_">self</span>.temp)</span><br><span class="line">        play_data = <span class="built_in">list</span>(play_data)[:]</span><br><span class="line">        <span class="variable language_">self</span>.episode_len = <span class="built_in">len</span>(play_data)</span><br><span class="line">        <span class="comment"># 增加数据</span></span><br><span class="line">        play_data = <span class="variable language_">self</span>.get_equi_data(play_data)</span><br><span class="line">        <span class="variable language_">self</span>.data_buffer.extend(play_data)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>collect_selfplay_data</code> 方法负责收集自我对弈数据。在每次自我对弈中，通过 <code>start_self_play</code> 方法进行一局游戏，获取获胜者和游戏过程中的数据（包括状态、MCTS 概率和获胜者信息），然后对这些数据进行扩充，并添加到数据缓冲区 <code>data_buffer</code> 中，为后续的训练提供数据支持。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">policy_update</span>(<span class="params">self</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;更新策略价值网络&quot;&quot;&quot;</span></span><br><span class="line">    mini_batch = random.sample(<span class="variable language_">self</span>.data_buffer, <span class="variable language_">self</span>.batch_size)</span><br><span class="line">    state_batch = [data[<span class="number">0</span>] <span class="keyword">for</span> data <span class="keyword">in</span> mini_batch]</span><br><span class="line">    state_batch = np.array(state_batch).astype(<span class="string">&quot;float32&quot;</span>)</span><br><span class="line">    mcts_probs_batch = [data[<span class="number">1</span>] <span class="keyword">for</span> data <span class="keyword">in</span> mini_batch]</span><br><span class="line">    mcts_probs_batch = np.array(mcts_probs_batch).astype(<span class="string">&quot;float32&quot;</span>)</span><br><span class="line">    winner_batch = [data[<span class="number">2</span>] <span class="keyword">for</span> data <span class="keyword">in</span> mini_batch]</span><br><span class="line">    winner_batch = np.array(winner_batch).astype(<span class="string">&quot;float32&quot;</span>)</span><br><span class="line">    old_probs, old_v = <span class="variable language_">self</span>.policy_value_net.policy_value(state_batch)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="variable language_">self</span>.epochs):</span><br><span class="line">        loss, entropy = <span class="variable language_">self</span>.policy_value_net.train_step(</span><br><span class="line">            state_batch,</span><br><span class="line">            mcts_probs_batch,</span><br><span class="line">            winner_batch,</span><br><span class="line">            <span class="variable language_">self</span>.learn_rate * <span class="variable language_">self</span>.lr_multiplier)</span><br><span class="line">        new_probs, new_v = <span class="variable language_">self</span>.policy_value_net.policy_value(state_batch)</span><br><span class="line">        kl = np.mean(np.<span class="built_in">sum</span>(old_probs * (</span><br><span class="line">            np.log(old_probs + <span class="number">1e-10</span>) - np.log(new_probs + <span class="number">1e-10</span>)),</span><br><span class="line">                            axis=<span class="number">1</span>)</span><br><span class="line">                     )</span><br><span class="line">        <span class="keyword">if</span> kl &gt; <span class="variable language_">self</span>.kl_targ * <span class="number">4</span>:  <span class="comment"># early stopping if D_KL diverges badly</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># 自适应调节学习率</span></span><br><span class="line">    <span class="keyword">if</span> kl &gt; <span class="variable language_">self</span>.kl_targ * <span class="number">2</span> <span class="keyword">and</span> <span class="variable language_">self</span>.lr_multiplier &gt; <span class="number">0.1</span>:</span><br><span class="line">        <span class="variable language_">self</span>.lr_multiplier /= <span class="number">1.5</span></span><br><span class="line">    <span class="keyword">elif</span> kl &lt; <span class="variable language_">self</span>.kl_targ / <span class="number">2</span> <span class="keyword">and</span> <span class="variable language_">self</span>.lr_multiplier &lt; <span class="number">10</span>:</span><br><span class="line">        <span class="variable language_">self</span>.lr_multiplier *= <span class="number">1.5</span></span><br><span class="line"></span><br><span class="line">    explained_var_old = (<span class="number">1</span> -</span><br><span class="line">                         np.var(np.array(winner_batch) - old_v.flatten()) /</span><br><span class="line">                         np.var(np.array(winner_batch)))</span><br><span class="line">    explained_var_new = (<span class="number">1</span> -</span><br><span class="line">                         np.var(np.array(winner_batch) - new_v.flatten()) /</span><br><span class="line">                         np.var(np.array(winner_batch)))</span><br><span class="line">    <span class="built_in">print</span>((<span class="string">&quot;kl:&#123;:.5f&#125;,&quot;</span></span><br><span class="line">           <span class="string">&quot;lr_multiplier:&#123;:.3f&#125;,&quot;</span></span><br><span class="line">           <span class="string">&quot;loss:&#123;&#125;,&quot;</span></span><br><span class="line">           <span class="string">&quot;entropy:&#123;&#125;,&quot;</span></span><br><span class="line">           <span class="string">&quot;explained_var_old:&#123;:.3f&#125;,&quot;</span></span><br><span class="line">           <span class="string">&quot;explained_var_new:&#123;:.3f&#125;&quot;</span></span><br><span class="line">           ).<span class="built_in">format</span>(kl,</span><br><span class="line">                    <span class="variable language_">self</span>.lr_multiplier,</span><br><span class="line">                    loss,</span><br><span class="line">                    entropy,</span><br><span class="line">                    explained_var_old,</span><br><span class="line">                    explained_var_new))</span><br><span class="line">    <span class="keyword">return</span> loss, entropy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>policy_update</code> 方法用于更新策略价值网络。首先从数据缓冲区中随机采样一个小批次的数据，包括状态、MCTS 概率和获胜者信息，并将其转换为适合网络输入的格式。然后通过多次调用 <code>train_step</code> 方法进行训练，计算价值损失和策略损失，并进行反向传播和参数优化。在训练过程中，还会计算新旧策略的 KL 散度，根据 KL 散度的值自适应地调整学习率乘数，同时计算并打印出 KL 散度、学习率乘数、损失、熵以及解释方差等训练信息，最后返回损失和熵的值。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">policy_evaluate</span>(<span class="params">self, n_games=<span class="number">10</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    通过与纯的MCTS算法对抗来评估训练的策略</span></span><br><span class="line"><span class="string">    注意：这仅用于监控训练进度</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    current_mcts_player = MCTSPlayer(<span class="variable language_">self</span>.policy_value_net.policy_value_fn,</span><br><span class="line">                                     c_puct=<span class="variable language_">self</span>.c_puct,</span><br><span class="line">                                     n_playout=<span class="variable language_">self</span>.n_playout)</span><br><span class="line">    pure_mcts_player = MCTS_Pure(c_puct=<span class="number">5</span>,</span><br><span class="line">                                 n_playout=<span class="variable language_">self</span>.pure_mcts_playout_num)</span><br><span class="line">    win_cnt = defaultdict(<span class="built_in">int</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n_games):</span><br><span class="line">        winner = <span class="variable language_">self</span>.game.start_play(current_mcts_player,</span><br><span class="line">                                      pure_mcts_player,</span><br><span class="line">                                      start_player=i % <span class="number">2</span>)</span><br><span class="line">        win_cnt[winner] += <span class="number">1</span></span><br><span class="line">    win_ratio = <span class="number">1.0</span> * (win_cnt[<span class="number">1</span>] + <span class="number">0.5</span> * win_cnt[-<span class="number">1</span>]) / n_games</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;num_playouts:&#123;&#125;, win: &#123;&#125;, lose: &#123;&#125;, tie:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(</span><br><span class="line">        <span class="variable language_">self</span>.pure_mcts_playout_num,</span><br><span class="line">        win_cnt[<span class="number">1</span>], win_cnt[<span class="number">2</span>], win_cnt[-<span class="number">1</span>]))</span><br><span class="line">    <span class="keyword">return</span> win_ratio</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>policy_evaluate</code> 方法用于评估训练的策略。通过创建基于当前策略价值网络的 MCTS 玩家和一个纯 MCTS 玩家进行对弈，统计在一定数量的游戏中双方的胜负情况，计算出当前策略的胜率，并打印相关信息，返回胜率值。该方法主要用于监控训练过程中策略的性能提升情况。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">run</span>(<span class="params">self</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;开始训练&quot;&quot;&quot;</span></span><br><span class="line">    root = os.getcwd()</span><br><span class="line">    dst_path = os.path.join(root, <span class="string">&#x27;dist&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(dst_path):</span><br><span class="line">        os.makedirs(dst_path)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="variable language_">self</span>.game_batch_num):</span><br><span class="line">            <span class="variable language_">self</span>.collect_selfplay_data(<span class="variable language_">self</span>.play_batch_size)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;batch i:&#123;&#125;, episode_len:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(</span><br><span class="line">                i + <span class="number">1</span>, <span class="variable language_">self</span>.episode_len))</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(<span class="variable language_">self</span>.data_buffer) &gt; <span class="variable language_">self</span>.batch_size:</span><br><span class="line">                loss, entropy = <span class="variable language_">self</span>.policy_update()</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;loss :&#123;&#125;, entropy:&#123;&#125;&quot;</span>.<span class="built_in">format</span>(loss, entropy))</span><br><span class="line">            <span class="keyword">if</span> (i + <span class="number">1</span>) % <span class="number">50</span> == <span class="number">0</span>:</span><br><span class="line">                <span class="variable language_">self</span>.policy_value_net.save_model(os.path.join(dst_path, <span class="string">&#x27;current_policy_step.model&#x27;</span>))</span><br><span class="line">            <span class="comment"># 检查当前模型的性能，保存模型的参数</span></span><br><span class="line">            <span class="keyword">if</span> (i + <span class="number">1</span>) % <span class="variable language_">self</span>.check_freq == <span class="number">0</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;current self-play batch: &#123;&#125;&quot;</span>.<span class="built_in">format</span>(i + <span class="number">1</span>))</span><br><span class="line">                win_ratio = <span class="variable language_">self</span>.policy_evaluate()</span><br><span class="line">                <span class="variable language_">self</span>.policy_value_net.save_model(os.path.join(dst_path, <span class="string">&#x27;current_policy.model&#x27;</span>))</span><br><span class="line">                <span class="keyword">if</span> win_ratio &gt; <span class="variable language_">self</span>.best_win_ratio:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">&quot;New best policy!!!!!!!!&quot;</span>)</span><br><span class="line">                    <span class="variable language_">self</span>.best_win_ratio = win_ratio</span><br><span class="line">                    <span class="comment"># 更新最好的策略</span></span><br><span class="line">                    <span class="variable language_">self</span>.policy_value_net.save_model(os.path.join(dst_path, <span class="string">&#x27;best_policy.model&#x27;</span>))</span><br><span class="line">                    <span class="keyword">if</span> (<span class="variable language_">self</span>.best_win_ratio == <span class="number">1.0</span> <span class="keyword">and</span></span><br><span class="line">                                <span class="variable language_">self</span>.pure_mcts_playout_num &lt; <span class="number">8000</span>):</span><br><span class="line">                        <span class="variable language_">self</span>.pure_mcts_playout_num += <span class="number">1000</span></span><br><span class="line">                        <span class="variable language_">self</span>.best_win_ratio = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">except</span> KeyboardInterrupt:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;\n\rquit&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>run</code> 方法是训练的主循环逻辑。首先创建保存模型的目录，如果不存在则自动创建。然后在循环中，不断地收集自我对弈数据，当数据量足够时进行策略更新，并定期保存当前的模型参数。每隔一定的批次数量，还会对当前模型进行性能评估，根据评估结果保存最佳模型参数，并根据胜率情况调整用于评估的纯 MCTS 玩家的模拟次数，以适应模型的不断进化。如果在训练过程中遇到键盘中断，则会打印退出信息并停止训练。</li>
+</ul>
+<p>在 <code>if __name__ == &#39;__main__&#39;:</code> 部分，首先获取当前的计算设备（CPU 或 GPU），并设置飞桨的计算设备。然后根据指定的模型路径（如果有）创建 <code>TrainPipeline</code> 实例，并调用 <code>run</code> 方法开始训练过程。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">无深</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/3.html">http://example.com/posts/3.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">无深~博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/2.html" title="队伍"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">队伍</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">无深</div><div class="author-info__description">无深个人博客，只明天更好！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/dhffsd"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">一、项目概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BA%94%E5%AD%90%E6%A3%8B%E6%B8%B8%E6%88%8F%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">二、五子棋游戏简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%9C%AC%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B"><span class="toc-number">3.</span> <span class="toc-text">三、本项目简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8-MCTS%EF%BC%88%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A0%91%E6%90%9C%E7%B4%A2%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">四、为什么使用 MCTS（蒙特卡洛树搜索）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%AE%AD%E7%BB%83%E7%AE%97%E6%B3%95%E6%B5%81%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">五、训练算法流程</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/3.html" title="No-Deep-GomokuView-AI项目介绍">No-Deep-GomokuView-AI项目介绍</a><time datetime="2024-12-17T16:58:32.379Z" title="发表于 2024-12-18 00:58:32">2024-12-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/2.html" title="队伍">队伍</a><time datetime="2024-12-11T15:23:38.948Z" title="发表于 2024-12-11 23:23:38">2024-12-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/1.html" title="一策惠三区·脱贫攻坚的共鸣">一策惠三区·脱贫攻坚的共鸣</a><time datetime="2024-12-11T15:15:11.682Z" title="发表于 2024-12-11 23:15:11">2024-12-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/0.html" title="无深个人博客说明">无深个人博客说明</a><time datetime="2024-09-19T02:50:34.531Z" title="发表于 2024-09-19 10:50:34">2024-09-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4a17b156.html" title="无深获奖墙">无深获奖墙</a><time datetime="2024-09-14T07:27:34.997Z" title="发表于 2024-09-14 15:27:34">2024-09-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 无深</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="8152976493" data-server="netease" data-type="playlist"   data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><div class="app-refresh" id="app-refresh" style="position: fixed;top: -2.2rem;left: 0;right: 0;z-index: 99999;padding: 0 1rem;font-size: 15px;height: 2.2rem;transition: all 0.3s ease;"><div class="app-refresh-wrap" style=" display: flex;color: #fff;height: 100%;align-items: center;justify-content: center;"><label>✨ 有新文章啦！ 👉</label><a href="javascript:void(0)" onclick="location.reload()"><span style="color: #fff;text-decoration: underline;cursor: pointer;">🍗点击食用🍔</span></a></div></div><script>if ('serviceWorker' in navigator) {
+if (navigator.serviceWorker.controller) {
+navigator.serviceWorker.addEventListener('controllerchange', function() {
+showNotification()
+})
+}
+window.addEventListener('load', function() {
+navigator.serviceWorker.register('/sw.js')
+})
+}
+function showNotification() {
+if (GLOBAL_CONFIG.Snackbar) {
+var snackbarBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+GLOBAL_CONFIG.Snackbar.bgLight :
+GLOBAL_CONFIG.Snackbar.bgDark
+var snackbarPos = GLOBAL_CONFIG.Snackbar.position
+Snackbar.show({
+text: '✨ 有新文章啦！ 👉',
+backgroundColor: snackbarBg,
+duration: 500000,
+pos: snackbarPos,
+actionText: '🍗点击食用🍔',
+actionTextColor: '#fff',
+onActionClick: function(e) {
+location.reload()
+},
+})
+} else {
+var showBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+'#3b70fc' :
+'#1f1f1f'
+var cssText = `top: 0; background: ${showBg};`
+document.getElementById('app-refresh').style.cssText = cssText
+}
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div><!-- hexo injector body_end start --><script async src="/js/ali_font.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('article-sort-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__slideInRight');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>
